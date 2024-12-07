@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>AvatarStudio: High-fidelity and Animatable 3D Avatar Creation from Text</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="robots" content="noindex">
+
+    <meta property="og:site_name" content="AvatarStudio" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:title" content="AvatarStudio: High-fidelity and Animatable 3D Avatar Creation from Text" />
+    <meta property="og:description" content="AvatarStudio: High-fidelity and Animatable 3D Avatar Creation from Text, 2023." />
+    <meta property="og:url" content="" />
+
+    <script src="assets/js/video_comparison.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <div class="highlight-clean" style="padding-bottom: 10px;">
+        <div class="container" style="max-width: 1024px; margin-bottom: 20px;">
+            <h1 class="text-center"><b>AvatarStudio</b>: High-fidelity and Animatable 3D Avatar Creation from Text</h1>
+        </div>
+    </div>
+
+
+
+    <!-- different sds guidances -->
+    <hr class="divider" />
+        <div class="container" style="max-width: 768px;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Forward LBS vs. Inverse LBS</h2>
+                    <p>We ablate on the design choice of forward LBS and inverse LBS.
+                        We compare the animation results of models trained with forward LBS (left) and with inverse LBS (right) strategies. 
+                        When using forward LBS training, certain floating artifacts can be observed around the hip and shoulder regions during the animation process.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 text-center">Forward LBS</div>
+                <div class="col-sm-3 text-center">Inverse LBS</div>
+                <div class="col-sm-3 text-center">Forward LBS</div>
+                <div class="col-sm-3 text-center">Inverse LBS</div>
+            </div>
+            <div class="row captioned_videos">
+                <div class="col-6">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="static/dualspace/captain_america_dual_merge.mp4" type="video/mp4"></source>
+                    </video>
+                    <h6 class="caption">Captain America</h6>
+                </div>
+                <div class="col-6">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="static/dualspace/iron_man_dual_merge.mp4" type="video/mp4"></source>
+                    </video>
+                    <h6 class="caption">Iron Man</h6>
+                </div>
+            </div>
+            <div class="row captioned_videos">
+                <div class="col-6">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="static/dualspace/hulk_dual_merge.mp4" type="video/mp4"></source>
+                    </video>
+                    <h6 class="caption">Hulk, Marvel Character</h6>
+                </div>
+                <div class="col-6">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="static/dualspace/policeman_dual_merge.mp4" type="video/mp4"></source>
+                    </video>
+                    <h6 class="caption">Policewoman</h6>
+                </div>
+            </div>
+        </div>
+
+    <hr class="divider" />
+        <div class="container" style="max-width: 768px;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Comparison with different condtions</h2>
+                    <p>We compare avatar results with different depth / normal conditions.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 text-center">Depth condition</div>
+                <div class="col-sm-4 text-center">Normal condition</div>
+                <div class="col-sm-4 text-center">DensePose condition</div>
+            </div>
+            <div class="row captioned_videos">
+                <div class="col-12">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="static/different_guidance/harry_potter.mp4" type="video/mp4"></source>
+                    </video>
+                    <h6 class="caption">xxx</h6>
+                </div>
+                <div class="col-12">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="static/different_guidance/ski.mp4" type="video/mp4"></source>
+                    </video>
+                    <h6 class="caption">xxx</h6>
+                </div>
+                <div class="col-12">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="static/different_guidance/dancer.mp4" type="video/mp4"></source>
+                    </video>
+                    <h6 class="caption">xxx</h6>
+                </div>
+                <div class="col-12">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="static/different_guidance/einstein.mp4" type="video/mp4"></source>
+                    </video>
+                    <h6 class="caption">xxx</h6>
+                </div>
+            </div>
+        
+    
+    <hr class="divider" />
+        <div class="container" style="max-width: 768px;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Image quality</h2>
+
+                    <p>We update avatar results without prefixes   such as "8K, HD, studio-like, blender, ultra-realistic, unreal" .</p>
+                </div>
+
+                <div class="row captioned_videos">
+                    <div class="col-3">
+                        <video class="video lazy" autoplay loop playsinline muted>
+                            <source data-src="static/updated_samples/dancer.mp4" type="video/mp4"></source>
+                        </video>
+                        <h6 class="caption">a Spanish flamenco dancer</h6>
+                    </div>
+                    <div class="col-3">
+                        <video class="video lazy" autoplay loop playsinline muted>
+                            <source data-src="static/updated_samples/kardashian.mp4" type="video/mp4"></source>
+                        </video>
+                        <h6 class="caption">Kim Kardashian</h6>
+                    </div>
+
+                    <div class="col-3">
+                        <video class="video lazy" autoplay loop playsinline muted>
+                            <source data-src="static/updated_samples/ski.mp4" type="video/mp4"></source>
+                        </video>
+                        <h6 class="caption">a woman wearing ski clothes</h6>
+                    </div>
+
+                    <div class="col-3">
+                        <video class="video lazy" autoplay loop playsinline muted>
+                            <source data-src="" type="video/mp4"></source>
+                        </video>
+                    <h6 class="caption"></h6>
+            </div>
+        </div>
+    </div>
+    
+
+
+        <div class="col-sm-12">
+            <p> After fixing this bug, we reduce the "floater" artifacts, producing cleaner and artifact-free outputs. .</p>
+        </div>
+
+        <div class="row captioned_videos">
+                <div class="col-3">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="static/updated_samples/chili_boy.mp4" type="video/mp4"></source>
+                    </video>
+                    <h6 class="caption">Chibi, single boy, cute, magician's outfit, top hat, magic wand, curly hair, shiny shoes</h6>
+                </div>
+
+                <div class="col-3">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="static/updated_samples/chibi_hanfu.mp4" type="video/mp4"></source>
+                    </video>
+                <h6 class="caption">Chibi, 1girl, hanfu, cat ears, cat girl, silk robe, wavy hair, wearing traditional sandals</h6>
+                
+                <div class="col-3">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="" type="video/mp4"></source>
+                    </video>
+                <h6 class="caption"></h6> 
+
+                <div class="col-3">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="" type="video/mp4"></source>
+                    </video>
+                <h6 class="caption"></h6>  
+            </div> 
+        </div>                   
+        </div>
+
+        <div class="col-sm-12">
+            <p> The original video results of text-driven animation. When the character moves away from the camera ("zoom-out"), the character's body only occupies a smaller pixel area, which can reduce visual clarity.</p>
+        </div>
+
+        <div class="row">
+
+            <div class="row captioned_videos">
+                <div class="col-4">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="static/new_animation/pregnant_person_001.mp4" type="video/mp4"></source>
+                    </video>
+                </div>
+                <div class="col-4">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="static/new_animation/pregnant_person_002.mp4" type="video/mp4"></source>
+                    </video>
+                    <h6 class="caption">A pregnant person of color</h6>
+                </div>
+                <div class="col-4">
+                    <video class="video lazy" autoplay loop playsinline muted>
+                        <source data-src="static/new_animation/pregnant_person_003.mp4" type="video/mp4"></source>
+                    </video>
+                </div>
+            </div>
+        </div>
+          
+        </div>
+
+        <hr class="divider" />
+        <div class="container" style="max-width: 768px;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Comparison Results</h2>
+                    <p>We compare AvatarStudio with current SoTA methods En3D, HumanGaussian, Rodin.</p>
+                </div>
+            </div>
+    
+            <div class="row" style="margin-bottom: 0px;">
+                <div class="col-xs-15 compare-title" style="width: 185px;">
+                    <p>HumanGaussian </p>
+                </div>
+                <div class="col-xs-15 compare-title" style="width: 185px;">
+                    <p>En3D</p>
+                </div>
+                <div class="col-xs-15 compare-title" style="width: 180px;">
+                    <p>Rodin</p>
+                </div>
+                <div class="col-xs-15 compare-title" style="width: 180px;">
+                    <p>AvatarVerse</p>
+                </div>
+            </div>
+    
+            <div class="row captioned_videos" id="res_2" style="margin-top: 0px; margin-bottom: 0px ;">
+                <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                    <source data-src="static/comparison_sota/ski.mp4" type="video/mp4"></source>
+                </video>
+                <p class="compare-caption">a woman wearing ski clothes</p>
+            </div>
+
+            <div class="row captioned_videos" id="res_2" style="margin-top: 0px; margin-bottom: 0px ;">
+                <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+                    <source data-src="static/comparison_sota/ranger.mp4" type="video/mp4"></source>
+                </video>
+                <p class="compare-caption">a Texas ranger</p>
+            </div>
+    
+        </div>
+
+    <hr class="divider" />
+        <div class="container" style="max-width: 768px;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>More examples for Ablation Studies</h2>
+                    <p>We provide xx.</p>
+                </div>
+
+                    <!-- different sds guidances -->
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-sm-12">
+                <p>We ablate on the design choice of forward LBS and inverse LBS.
+                    We compare the animation results of models trained with forward LBS (left) and with inverse LBS (right) strategies. 
+                    When using forward LBS training, certain floating artifacts can be observed around the hip and shoulder regions during the animation process.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <hr class="divider" />
+    <div class="row">
+        <div class="col-sm-3 text-center">without part-aware super-resolution</div>
+        <div class="col-sm-3 text-center">with part-aware super-resolution</div>
+        <div class="col-sm-3 text-center">without part-aware super-resolution</div>
+        <div class="col-sm-3 text-center">with part-aware super-resolution</div>
+    </div>
+
+
+    <div class="row captioned_videos">
+        <div class="col-6">
+            <video class="video lazy" autoplay loop playsinline muted>
+                <source data-src="static/output_part_sr/DoctorStrange.mp4" type="video/mp4"></source>
+            </video>
+            <h6 class="caption">Doctor Strange, Marvel Character</h6>
+        </div>
+        <div class="col-6">
+            <video class="video lazy" autoplay loop playsinline muted>
+                <source data-src="static/output_part_sr/Huamulan.mp4" type="video/mp4"></source>
+            </video>
+            <h6 class="caption">Hua mulan</h6>
+        </div>
+    </div>
+    <div class="row captioned_videos">
+        <div class="col-6">
+            <video class="video lazy" autoplay loop playsinline muted>
+                <source data-src="static/output_part_sr/karate.mp4" type="video/mp4"></source>
+            </video>
+            <h6 class="caption">a karate master with black belt</h6>
+        </div>
+        <div class="col-6">
+            <video class="video lazy" autoplay loop playsinline muted>
+                <source data-src="static/output_part_sr/Terracotta.mp4" type="video/mp4"></source>
+            </video>
+            <h6 class="caption">Terracotta</h6>
+        </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="row">
+        <div class="col-sm-3 text-center">without CFG-rescale</div>
+        <div class="col-sm-3 text-center">with CFG-rescale</div>
+        <div class="col-sm-3 text-center">without CFG-rescale</div>
+        <div class="col-sm-3 text-center">with CFG-rescale</div>
+    </div>
+    <div class="row captioned_videos">
+        <div class="col-6">
+            <video class="video lazy" autoplay loop playsinline muted>
+                <source data-src="static/output_cfg_rescale/DoctorStrange.mp4" type="video/mp4"></source>
+            </video>
+            <h6 class="caption">Doctor Strange, Marvel Character</h6>
+        </div>
+        <div class="col-6">
+            <video class="video lazy" autoplay loop playsinline muted>
+                <source data-src="static/output_cfg_rescale/Elsa.mp4" type="video/mp4"></source>
+            </video>
+            <h6 class="caption">Elsa in Forzen</h6>
+        </div>
+    </div>
+    <div class="row captioned_videos">
+        <div class="col-6">
+            <video class="video lazy" autoplay loop playsinline muted>
+                <source data-src="static/output_cfg_rescale/Huamulan.mp4" type="video/mp4"></source>
+            </video>
+            <h6 class="caption">Hua mulan</h6>
+        </div>
+        <div class="col-6">
+            <video class="video lazy" autoplay loop playsinline muted>
+                <source data-src="static/output_cfg_rescale/Terracotta.mp4" type="video/mp4"></source>
+            </video>
+            <h6 class="caption">Terracotta</h6>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Citation</h2>
+                <code>
+                    @article{anon2023avatarstudio,<br>
+                    &nbsp; author = {Anonymous},<br>
+                    &nbsp; title  = {AvatarStudio: High-fidelity and Animatable 3D Avatar Creation from Text},<br>
+                    &nbsp; joural = {OpenReview},<br>
+                    &nbsp; year   = {2023},<br>
+                }</code></div>
+        </div>
+    </div>
+    <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
+    <script src="assets/js/yall.js"></script>
+    <script>
+        yall(
+            {
+                observeChanges: true
+            }
+        );
+    </script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
+</body>
+
+</html>
